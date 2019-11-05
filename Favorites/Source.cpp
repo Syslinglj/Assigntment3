@@ -14,12 +14,12 @@ int main()
 	cout << " " << endl;
 
 	Favorites *pFavorites = NULL;
+	pFavorites = new Favorites[100];
 
 	while (input != 'q' && input != 'Q')
 	{
-		pFavorites = new Favorites[100];
+
 		int inputFavorites = 0;
-		
 
 		//asks how many favorites youd like to add
 		if (input == 'y' || input == 'Y')
@@ -29,15 +29,14 @@ int main()
 			cin.ignore();
 			cout << endl;
 			nFavorites += inputFavorites;
-			cout << nFavorites << endl;
-			cout << counter << endl;
+
 			//asks user for favorites input
 			for (counter; counter < nFavorites; counter++)
 			{
 				pFavorites[counter].getFavorites();
 			}
 		}
-		system("pause");
+		
 		//asks to list, repeat to add more, or quit program
 		cout << "For a list of favorites type L, to add more favorites type Y, to quit type Q. ";
 		cin >> input;

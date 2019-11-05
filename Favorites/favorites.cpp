@@ -7,14 +7,16 @@ Favorites::Favorites()
 {
 	make = "";
 	model = "";
+	year = 0;
 	color = "";
 	cost = 0;
 	horsepower = 0;
 }
-Favorites::Favorites(string m, string mo, string c, int cst, int hp)
+Favorites::Favorites(string m, string mo, int y, string c, int cst, int hp)
 {
 	make = m;
 	model = mo;
+	year = y;
 	color = c;
 	cost = cst;
 	horsepower = hp;
@@ -26,6 +28,10 @@ void Favorites::getFavorites()
 	cout << endl;
 	cout << "Car model? ";
 	getline(cin, model);
+	cout << endl;
+	cout << "Model Year? ";
+	cin >> year;
+	cin.ignore();
 	cout << endl;
 	cout << "Car color? ";
 	getline(cin, color);
